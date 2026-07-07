@@ -105,7 +105,7 @@ Isometric_MTO/
 
 ## Backend
 
-* FastAPI REST API
+* FastAPI
 * Swagger documentation
 * Server-side validation
 * Google Gemini Vision integration
