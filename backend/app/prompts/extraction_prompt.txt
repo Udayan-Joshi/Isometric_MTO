@@ -84,3 +84,33 @@ The JSON must follow exactly this structure:
       "field_welds":0
   }
 }
+
+Return JSON that EXACTLY matches the response schema.
+
+Every item in "items" MUST contain:
+
+- item_no
+- category
+- description
+- size_nps
+- schedule_rating
+- material_spec
+- end_type
+- quantity
+- unit
+- length_m
+- confidence
+- remarks
+
+Never omit a required field.
+
+If a value cannot be determined:
+
+- use null for optional fields
+- use sensible defaults for required fields
+
+Do not rename fields.
+
+Do not create additional fields.
+
+Return only valid JSON.
