@@ -12,15 +12,16 @@ def load_image(file_bytes: bytes, content_type: str) -> Image.Image:
     """
 
     if content_type == "application/pdf":
-        pages = convert_from_bytes(file_bytes)
+        import fitz
 
-        if not pages:
+        document = fitz.open(stream=file_bytes, filetype="pdf")
+        if document.page_count == 0:
             raise ValueError("Unable to read PDF.")
 
-        image = pages[0]
-
-    else:
-        image = Image.open(BytesIO(file_bytes))
+        page = document.load_page(0)
+        pixmap = page.get_pixmap(matrix=fitz.Matrix(3, 3))
+        image = Image.open(BytesIO(pixmap.tobytes("png")))
+        document.close()
 
     image = image.convert("RGB")
 
