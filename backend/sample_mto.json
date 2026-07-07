@@ -1,0 +1,49 @@
+{
+  "drawing_meta": {
+    "drawing_no": "ISO-1501-01",
+    "revision": "2",
+    "line_number": "6\"-P-1501-A1A-IH",
+    "nps": "6\"",
+    "material_class": "A1A",
+    "service": "Process"
+  },
+  "items": [
+    {
+      "item_no": 1,
+      "category": "PIPE",
+      "description": "Pipe, Seamless, BE, ASME B36.10",
+      "size_nps": "6\"",
+      "schedule_rating": "SCH 40",
+      "material_spec": "ASTM A106 Gr.B",
+      "end_type": "BW",
+      "quantity": 1,
+      "unit": "M",
+      "length_m": 12.45,
+      "confidence": 0.98,
+      "remarks": ""
+    },
+    {
+      "item_no": 2,
+      "category": "FITTING",
+      "description": "Elbow 90° LR, BW, ASME B16.9",
+      "size_nps": "6\"",
+      "schedule_rating": "SCH 40",
+      "material_spec": "ASTM A234 WPB",
+      "end_type": "BW",
+      "quantity": 4,
+      "unit": "EA",
+      "confidence": 0.92,
+      "remarks": ""
+    }
+  ],
+  "summary": {
+    "total_pipe_length_m": 12.45,
+    "fittings": 4,
+    "flanges": 2,
+    "valves": 1,
+    "gaskets": 2,
+    "bolt_sets": 2,
+    "field_welds": 1
+  },
+  "mock": true
+}
