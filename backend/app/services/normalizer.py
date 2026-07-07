@@ -50,10 +50,13 @@ def normalize_mto(raw: dict) -> MTOResponse:
                 quantity=float(quantity),
                 unit=unit,
                 length_m=item.get("length_m"),
-                confidence=item.get("confidence", 0.80),
+                confidence=item.get("confidence"),
                 remarks=item.get("remarks", ""),
             )
         )
+
+        if confidence is None:
+            confidence = 0.80
 
     return MTOResponse(
         drawing_meta=DrawingMeta(**drawing),
