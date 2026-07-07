@@ -108,10 +108,20 @@ export default function ResultView({
       {/* Table */}
 
       <div className="mt-8">
+        <div className="flex justify-between items-center mt-8 mb-4">
 
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="text-2xl font-semibold">
           Material Take-Off
-        </h2>
+      </h2>
+
+        <a href="http://127.0.0.1:8000/api/export/csv"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">
+        Export CSV
+        </a>
+
+</div>
 
         <MtoTable items={result.items} />
 

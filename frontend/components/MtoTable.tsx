@@ -12,7 +12,7 @@ export default function MtoTable({
 
       <table className="w-full text-sm">
 
-        <thead className="bg-gray-100">
+        <thead className="bg-slate-800 text-white">
 
           <tr>
             <th className="p-3 text-left">Item</th>
@@ -32,7 +32,7 @@ export default function MtoTable({
 
             <tr
               key={item.item_no}
-              className="border-t"
+              className="border-t hover:bg-gray-50 transition"
             >
 
               <td className="p-3">{item.item_no}</td>
